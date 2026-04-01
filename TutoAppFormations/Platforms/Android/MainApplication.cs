@@ -11,6 +11,16 @@ namespace TutoAppFormations
         {
         }
 
-        protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
+        protected override MauiApp CreateMauiApp() { 
+            Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("NoUnderline", (handler, view) =>
+            {
+                if (view is not null)
+                {
+                    handler.PlatformView.BackgroundTintList = 
+                    Android.Content.Res.ColorStateList.ValueOf(Android.Graphics.Color.Transparent);
+                }
+            });
+            return MauiProgram.CreateMauiApp(); 
+        }
     }
 }

@@ -16,6 +16,56 @@
                 
         </ToolbarItem>
     </ContentPage.ToolbarItems>
+    <StackLayout Margin="20">
+        <Border 
+            Padding="10,0"
+            Margin="0,0,0,20"
+            StrokeShape="RoundRectangle 15"
+            StrokeThickness="0"
+            BackgroundColor="#ececec">
+         <Entry 
+             Placeholder="Rechercher ..." 
+             BackgroundColor="Transparent"/>
+        </Border>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Image 
+                Source="icon_dev.png" 
+                Aspect="AspectFill"
+                HeightRequest="60"
+                WidthRequest="60"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+           />
+            <Label 
+                Grid.Column="1"
+                Text="Formation Développement Mobile"
+                FontSize="18"
+                VerticalOptions="Center"/>
+            <Label 
+                Grid.Column="1"
+                Grid.Row="1"
+                Text="Formation Développement Mobile"
+                FontSize="16"
+                VerticalOptions="Center"/>
+            <Label 
+                Grid.Column="1"
+                Grid.Row="2"
+                Text="18 Vidéos"
+                FontSize="12"
+                VerticalOptions="Center"/>
+
+
+
+        </Grid>
+
+    </StackLayout>
   
 
 </ContentPage>
