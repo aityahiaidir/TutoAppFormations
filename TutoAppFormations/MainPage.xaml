@@ -27,51 +27,65 @@
              Placeholder="Rechercher ..." 
              BackgroundColor="Transparent"/>
         </Border>
-        <Grid BackgroundColor="White">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="2*"/>
-            </Grid.ColumnDefinitions>
-            <Image 
-                Source="icon_design.png" 
-                Aspect="AspectFit"
-                HeightRequest="80"
-                Margin="0,0,20,0"
+        <ListView x:Name="lc"
+                  SeparatorColor="White"
+                  BackgroundColor="White"
+                  RowHeight="98">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid BackgroundColor="White">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image 
+        Source="{Binding ImageUrl}" 
+        Aspect="AspectFit"
+        HeightRequest="80"
+        Margin="0,0,20,0"
+    
+   />
+                            <Label 
+        Grid.Column="1"
+        Text="{Binding Title}"
+        FontSize="18"
+        FontAttributes="Bold"/>
+
+                            <Label 
+        Grid.Column="1"
+        Text="{Binding Description}"
+        VerticalOptions="Center"
+        LineHeight="0.80"
+        FontSize="16"/>
+
+                            <HorizontalStackLayout Grid.Column="1">
+                                <Label 
+        VerticalOptions="End"
+        Padding="0,0,4,0"
+        Text="42"
+       />
+                                <Label 
+        VerticalOptions="End"
+        Text="cours"
+       />
+
+                            </HorizontalStackLayout>
+
+
+
+
+                        </Grid>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
             
-           />
-            <Label 
-                Grid.Column="1"
-                Text="Exemple de titre"
-                FontSize="18"
-                FontAttributes="Bold"/>
-
-            <Label 
-                Grid.Column="1"
-                Text="Lorem Ipsum text."
-                VerticalOptions="Center"
-                LineHeight="0.80"
-                FontSize="16"/>
-            
-            <HorizontalStackLayout Grid.Column="1">
-                <Label 
-                VerticalOptions="End"
-                Padding="0,0,4,0"
-                Text="42"
-               />
-                <Label 
-                VerticalOptions="End"
-                Text="cours"
-               />
-                
-            </HorizontalStackLayout>
-
-
-
-
-        </Grid>
+        </ListView>
+        
 
     </StackLayout>
   
