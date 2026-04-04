@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TutoAppFormations.UserPage"
+             Title="UserPage"
+             Shell.BackgroundColor="#F24D65"
+             Shell.TitleColor="White">
+    <VerticalStackLayout>
+        <!--
+        <Border Background="#ececec"
+                StrokeShape="RoundRectangle 15"
+                Margin="20"
+                StrokeThickness="0"
+              >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="user.png" Margin="20"                   
+                   />
+                <Label Text="John Doe"
+                       FontSize="22"
+                       FontAttributes="Bold"
+                       Grid.Row="1"
+                       HorizontalTextAlignment="Center"
+                       />
+                <StackLayout Grid.Column="1">
+                    <Label 
+                        Text="Lorem ipsum" 
+                        FontSize="18" 
+                        Margin="0,10,0,0" 
+                        FontAttributes="Bold"/>
+                    <Label 
+                        Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed. "/>
+                </StackLayout>
+                <Label 
+                    Grid.Row="1" 
+                    Grid.Column="1" 
+                    Text="Lorem" 
+                    FontAttributes="Bold"
+                    HorizontalTextAlignment="End"/>
+            </Grid>
+            
+        </Border>
+        -->
+        <Border Background="#ececec" Margin="20"  Stroke="Transparent"
+            StrokeThickness="0"
+            Padding="20">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10"/>
+            </Border.StrokeShape>
+            
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Image Source="user.png"/>
+                <Label Grid.Row="1" Text="Anthony" 
+                       FontAttributes="Bold"
+                       FontSize="22"
+                       HorizontalTextAlignment="Center"/>
+                <StackLayout Grid.Column="1">
+                    <Label Text="Lorem ipsum" 
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           Margin="0,10,0,0"/>
+                    <Label Text="Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet." />
+                </StackLayout>
+                <Label Grid.Row="1" Grid.Column="1" 
+                       Text="Lorem" FontAttributes="Bold"
+                       HorizontalTextAlignment="End"/>
+            </Grid>
+        </Border>
+        <!-- Paramètre utilisateurs -->
+        <TableView Intent="Menu" Margin="20,0">
+            <TableRoot>
+                <TableSection Title="Vos paramètre" TextColor="#323a45">
+                    <SwitchCell Text="Notification"/>
+                    <SwitchCell Text="Sauvegarde automatique"/>
+                    <SwitchCell Text="Mise à jour"/>
+                    <SwitchCell Text="Iniquement avec wifi"/>
+                    <SwitchCell Text="Lorem ipsum"/>
+                    <SwitchCell Text="Notification"/>
+
+                </TableSection>
+            </TableRoot>
+            
+        </TableView>
+        <!-- Bouttons -->
+        <Button Text="Changer mot de passe" 
+                WidthRequest="250"
+                FontSize="16"
+                BackgroundColor="#f24d65"
+                Margin="0,40,0,0"
+                Clicked="Button_Clicked"/>
+        <Button Text="Login" 
+                Background=" 
+                Transparent" 
+                TextColor="#323a45"
+                Clicked="Button_Clicked_1"/>
+    </VerticalStackLayout>
+</ContentPage>

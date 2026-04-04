@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Développement",
+    "description": "Apprendre le développement",
+    "imageUrl": "icon_dev.png",
+    "formationCount": 10
+  },
+  {
+    "title": "Design",
+    "description": "Apprendre le désign et l'UX",
+    "imageUrl": "icon_design.png",
+    "formationCount": 8
+  },
+  {
+    "title": "Photo",
+    "description": "Formations pour devenir expert en IA",
+    "imageUrl": "icon_photo.png",
+    "formationCount": 12
+  },
+  {
+    "title": "Video",
+    "description": "Formations pour devenir expert en cybersécurité",
+    "imageUrl": "icon_video.png",
+    "formationCount": 5
+  },
+  {
+    "title": "Bureautique",
+    "description": "Formations pour devenir expert en cloud computing",
+    "imageUrl": "icon_ppt.png",
+    "formationCount": 7
+  },
+  {
+    "title": "Business",
+    "description": "Formations pour devenir expert en cloud computing",
+    "imageUrl": "icon_cible.png",
+    "formationCount": 7
+  },
+  {
+    "title": "Gestion",
+    "description": "Formations pour devenir expert en cloud computing",
+    "imageUrl": "icon_gestion.png",
+    "formationCount": 7
+  },
+  {
+    "title": "3D",
+    "description": "Formations pour devenir expert en cloud computing",
+    "imageUrl": "icon_modelisation.png",
+    "formationCount": 7
+  }
+]

@@ -17,15 +17,29 @@ namespace TutoAppFormations
         public MainPage()
         {
             InitializeComponent();
-            LoadCategoriesFromApi();
-         
+            //LoadCategoriesFromApi();
+            LoadCategoriesFromAssets();
+
+
         }
 
         private void ToolbarItem_Clicked(object sender, EventArgs e)
         {
-            //TODO : Naviguer vers la page Profil             
+            //TODO : Naviguer vers la page Profil
+            Navigation.PushAsync(new UserPage());
         }
 
+        public async void LoadCategoriesFromAssets()
+        { 
+            using var stream = await FileSystem.OpenAppPackageFileAsync("categories.json");
+            using var reader = new StreamReader(stream);
+            var json = await reader.ReadToEndAsync();
+            var categories = System.Text.Json.JsonSerializer.Deserialize<List<Categorie>>(json, new System.Text.Json.JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            });
+            lc.ItemsSource = categories;
+        }
         public async void LoadCategoriesFromApi()
         {
             try

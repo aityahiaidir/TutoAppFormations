@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TutoAppFormations.LoginPage"
+            Title="Se Connecter"
+            Shell.BackgroundColor="#F24D65"
+            Shell.TitleColor="White">
+    <VerticalStackLayout Margin="20">
+        <Grid Margin="0,0,0,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="education.png"/>
+            <StackLayout Grid.Column="1" VerticalOptions="Center">
+                <Label Text="Connexion" FontSize="24" FontAttributes="Bold"/>
+                <Label Text="Connectez vous pour acceder a vos formations viséo"/>
+            </StackLayout>
+          
+        </Grid>
+        <Border >
+            <Entry Placeholder="Pseudo" />
+        </Border>
+        <Border>
+            <Entry Placeholder="Password" IsPassword="True" />
+        </Border>
+        <HorizontalStackLayout HorizontalOptions="End">
+            <CheckBox/>
+            <Label Text="Se souvenir de moi." FontSize="14"/>
+        </HorizontalStackLayout>
+        <!-- Bouttons -->
+        <Button Text="Changer mot de passe" 
+         WidthRequest="250"
+         FontSize="16"
+         BackgroundColor="#f24d65"
+         Margin="0,40,0,0"
+         Clicked="Button_Clicked"
+         />
+        <Button Text="Login" 
+         Background=" 
+         Transparent" 
+         TextColor="#323a45"
+         Clicked="Button_Clicked_1"
+         />
+
+    </VerticalStackLayout>
+</ContentPage>
